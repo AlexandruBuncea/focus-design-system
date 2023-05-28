@@ -1,4 +1,5 @@
 {
+  "homepage": "http://alexandrubuncea.github.io/focus-design-system",
   "name": "focus-design-system",
   "version": "1.0.0",
   "description": "This is a work in progress project where I build my personal design system that I use for learning and growing my design system skills in order to understand the engineering side of it too.",
@@ -8,8 +9,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "build-storybook -c .storybook -o .out",
-    "deploy-storybook": "gh-pages -d .out"
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
