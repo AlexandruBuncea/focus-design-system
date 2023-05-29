@@ -1,0 +1,50 @@
+{
+  "name": "focus-design-system",
+  "version": "1.0.0",
+  "description": "This is a work in progress project where I build my personal design system that I use for learning and growing my design system skills in order to understand the engineering side of it too.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "predeploy": "npm run storybook build",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@vitejs/plugin-react": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/blocks": "^7.0.18",
+    "@storybook/react": "^7.0.18",
+    "@storybook/react-vite": "^7.0.18",
+    "@storybook/testing-library": "^0.1.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.23",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.18",
+    "typescript": "^4.6.4",
+    "vite": "^4.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrubuncea/focus-design-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandrubuncea/focus-design-system/issues"
+  },
+  "homepage": "https://github.com/alexandrubuncea/focus-design-system"
+}
