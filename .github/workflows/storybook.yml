@@ -22,3 +22,4 @@ jobs:
           folder: docs-build # output folder from `npm run build-storybook`
           CLEAN: true
           TARGET_FOLDER: "." # Root of the gh-pages branch
+          jekyll: false
