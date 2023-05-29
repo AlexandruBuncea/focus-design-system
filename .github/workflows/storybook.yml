@@ -22,5 +22,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # Deploy to gh-pages branch
           CLEAN: true
-          folder: "." # Root of the gh-pages branch
+          folder: "storybook-static" # Root of the gh-pages branch
 
