@@ -19,8 +19,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.2
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # Deploy to gh-pages branch
           CLEAN: true
-          TARGET_FOLDER: "." # Root of the gh-pages branch
-          jekyll: false
+          folder: "." # Root of the gh-pages branch
+
