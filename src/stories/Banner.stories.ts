@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 const meta: Meta<typeof Banner> = {
-  title: "Components/Banner",
+  title: "Components/Banners",
   component: Banner,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
