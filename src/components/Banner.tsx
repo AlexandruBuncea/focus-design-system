@@ -1,10 +1,5 @@
 import React, { ComponentType } from "react";
-import {
-  CheckCircleIcon,
-  MegaphoneIcon,
-  InformationCircleIcon,
-  XCircleIcon,
-} from "@heroicons/react/24/solid";
+import Icon, { IconName } from "./Icon";
 import "../output.css";
 
 interface BannerProps {
@@ -23,12 +18,12 @@ export const Banner = ({ variant, content }: BannerProps) => {
     announcement: "bg-white",
   };
 
-  const icon = {
-    positive: CheckCircleIcon,
-    info: InformationCircleIcon,
-    warning: XCircleIcon,
-    danger: XCircleIcon,
-    announcement: MegaphoneIcon,
+  const icon: { [K in BannerProps["variant"]]: IconName } = {
+    positive: "CheckCircleIcon",
+    info: "InformationCircleIcon",
+    warning: "XCircleIcon",
+    danger: "XCircleIcon",
+    announcement: "MegaphoneIcon",
   };
 
   const iconClass = {
@@ -39,12 +34,14 @@ export const Banner = ({ variant, content }: BannerProps) => {
     announcement: "text-[#131314]",
   };
 
-  const Icon = icon[variant];
+  const iconName = icon[variant];
   const classToApply = variantClasses[variant];
 
   return (
     <div className={`${baseClasses} ${classToApply}`}>
-      {Icon && <Icon className={`h-5 w-5 ${iconClass[variant]}`} />}
+      {iconName && (
+        <Icon icon={iconName} size="24" className={iconClass[variant]} />
+      )}
       <div className="text-[#131314]">{content}</div>
     </div>
   );

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconButton } from "../components/IconButton";
-import { CheckCircleIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import * as HeroIcons from "@heroicons/react/24/solid";
 
 const meta: Meta<typeof IconButton> = {
   title: "Components/Icon Button",
@@ -24,10 +24,10 @@ const meta: Meta<typeof IconButton> = {
         type: "boolean",
       },
     },
-    Icon: {
+    icon: {
       control: {
         type: "select",
-        options: ["CheckCircleIcon", "ArrowRightIcon"],
+        options: Object.keys(HeroIcons),
       },
     },
   },
@@ -39,27 +39,27 @@ type Story = StoryObj<typeof IconButton>;
 export const Primary: Story = {
   args: {
     variant: "primary",
-    Icon: CheckCircleIcon,
+    icon: "CheckCircleIcon",
   },
 };
 
 export const Secondary: Story = {
   args: {
     variant: "secondary",
-    Icon: CheckCircleIcon,
+    icon: "CheckCircleIcon",
   },
 };
 
 export const Ghost: Story = {
   args: {
     variant: "ghost",
-    Icon: CheckCircleIcon,
+    icon: "CheckCircleIcon",
   },
 };
 
 export const Danger: Story = {
   args: {
     variant: "danger",
-    Icon: CheckCircleIcon,
+    icon: "CheckCircleIcon",
   },
 };

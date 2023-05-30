@@ -9,10 +9,13 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "predeploy": "npm run storybook build",
-    "build-storybook": "storybook build -o ./storybook-static"
+    "build-storybook": "storybook build -o ./storybook-static",
+    "start": "npm run tailwind:watch",
+    "tailwind:watch": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@storybook/addon-a11y": "^7.0.18",
     "@vitejs/plugin-react": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

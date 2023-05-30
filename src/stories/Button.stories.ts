@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../components/Button";
-import { InboxArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import * as HeroIcons from "@heroicons/react/24/solid";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -26,12 +26,14 @@ const meta: Meta<typeof Button> = {
     },
     LeftIcon: {
       control: {
-        type: "boolean",
+        type: "select",
+        options: Object.keys(HeroIcons),
       },
     },
     RightIcon: {
       control: {
-        type: "boolean",
+        type: "select",
+        options: Object.keys(HeroIcons),
       },
     },
     fullWidth: {
@@ -49,8 +51,8 @@ export const Primary: Story = {
   args: {
     variant: "primary",
     label: "Button",
-    RightIcon: ArrowRightIcon,
-    LeftIcon: InboxArrowDownIcon,
+    RightIcon: "ArrowRightIcon",
+    LeftIcon: "InboxArrowDownIcon",
   },
 };
 
@@ -58,8 +60,8 @@ export const Secondary: Story = {
   args: {
     variant: "secondary",
     label: "Button",
-    RightIcon: ArrowRightIcon,
-    LeftIcon: InboxArrowDownIcon,
+    RightIcon: "ArrowRightIcon",
+    LeftIcon: "InboxArrowDownIcon",
   },
 };
 
@@ -67,8 +69,8 @@ export const Ghost: Story = {
   args: {
     variant: "ghost",
     label: "Button",
-    RightIcon: ArrowRightIcon,
-    LeftIcon: InboxArrowDownIcon,
+    RightIcon: "ArrowRightIcon",
+    LeftIcon: "InboxArrowDownIcon",
   },
 };
 
@@ -76,7 +78,7 @@ export const Danger: Story = {
   args: {
     variant: "danger",
     label: "Button",
-    RightIcon: ArrowRightIcon,
-    LeftIcon: InboxArrowDownIcon,
+    RightIcon: "ArrowRightIcon",
+    LeftIcon: "InboxArrowDownIcon",
   },
 };
